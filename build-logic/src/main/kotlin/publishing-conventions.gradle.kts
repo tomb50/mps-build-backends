@@ -24,6 +24,14 @@ publishing {
                 }
             }
         }
+        maven {
+            name = "IPFReleases"
+            url = uri("<change_me>")
+                credentials {
+                    username = "<change_me>"
+                    password = "<change_me>"
+                }
+        }
     }
 
     publications.withType<MavenPublication>().configureEach {

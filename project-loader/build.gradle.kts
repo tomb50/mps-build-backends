@@ -11,7 +11,8 @@ plugins {
     id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.13.2"
 }
 
-version = "${project.extra["version.project-loader"]}${computeVersionSuffix()}"
+// Don't use snapshot
+version = "${project.extra["version.project-loader"]}"
 
 // MPS runtime JARs should be available for compiling code and tests but not propagated to consumers.
 val mpsRuntime by configurations.creating

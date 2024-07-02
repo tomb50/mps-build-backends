@@ -5,7 +5,8 @@ plugins {
     id("application")
 }
 
-version = "${project.extra["version.backend"]}${computeVersionSuffix()}"
+// remove the snapshot
+version = "${project.extra["version.backend"]}"
 
 val mpsZip by configurations.creating
 
